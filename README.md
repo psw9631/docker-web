@@ -128,19 +128,19 @@ docker info
 
 Client:
 
-&#x20;Version:    29.9.2
+\&#x20;Version:    29.9.2
 
-&#x20;Context:    default
+\&#x20;Context:    default
 
-&#x20;Debug Mode: false
+\&#x20;Debug Mode: false
 
-&#x20;Plugins:
+\&#x20;Plugins:
 
-&#x20; agent: Docker AI Agent Runner (Docker Inc.)
+\&#x20; agent: Docker AI Agent Runner (Docker Inc.)
 
-&#x20;   Version:  v1.152.0
+\&#x20;   Version:  v1.152.0
 
-&#x20;   Path:     /usr/local/lib/docker/cli-plugins/docker-agent
+\&#x20;   Path:     /usr/local/lib/docker/cli-plugins/docker-agent
 
 ...
 
@@ -195,17 +195,17 @@ docker-web/
 
 └── docs/
 
-\\\&#x20;   └── images/
+\\\\\\\&#x20;   └── images/
 
-\\\&#x20;       ├── port-8080.png
+\\\\\\\&#x20;       ├── port-8080.png
 
-\\\&#x20;       ├── bind-before.png
+\\\\\\\&#x20;       ├── bind-before.png
 
-\\\&#x20;       ├── bind-after.png
+\\\\\\\&#x20;       ├── bind-after.png
 
-\\\&#x20;       ├── vscode-github.png
+\\\\\\\&#x20;       ├── vscode-github.png
 
-\\\&#x20;       └── github-repository.png
+\\\\\\\&#x20;       └── github-repository.png
 
 ```
 
@@ -287,13 +287,13 @@ pwd
 
 
 
-출력 결과:
+출력 결과: 
 
 
 
 ```
 
-<현재 경로 출력 결과>
+/home/psw/docker-web
 
 ```
 
@@ -317,7 +317,7 @@ ls
 
 ```
 
-<ls 출력 결과>
+Dockerfile  README.md  index.html
 
 ```
 
@@ -341,7 +341,19 @@ ls -la
 
 ```
 
-<ls -la 출력 결과>
+total 52
+
+drwxr-xr-x 3 psw psw  4096 Nov  2 13:00 .
+
+drwxr-x--- 9 psw psw  4096 Nov  2 12:43 ..
+
+drwxr-xr-x 7 psw psw  4096 Nov  2 13:07 .git
+
+\-rw-r--r-- 1 psw psw    68 Nov  2 10:50 Dockerfile
+
+\-rw-r--r-- 1 psw psw 29272 Nov  2 13:07 README.md
+
+\-rw-r--r-- 1 psw psw   217 Nov  2 12:03 index.html
 
 ```
 
@@ -367,7 +379,7 @@ ls
 
 ```
 
-<cli-practice 디렉터리가 보이는 출력 결과>
+Dockerfile  README.md  cli-practice  index.html
 
 ```
 
@@ -393,7 +405,7 @@ pwd
 
 ```
 
-<cli-practice 경로 출력 결과>
+/home/psw/docker-web/cli-practice
 
 ```
 
@@ -419,7 +431,15 @@ ls -la
 
 ```
 
-<memo.txt 파일이 보이는 출력 결과>
+ls -la
+
+total 8
+
+drwxr-xr-x 2 psw psw 4096 Nov  2 13:10 .
+
+drwxr-xr-x 4 psw psw 4096 Nov  2 13:10 ..
+
+\-rw-r--r-- 1 psw psw    0 Nov  2 13:10 memo.txt
 
 ```
 
@@ -471,7 +491,9 @@ ls
 
 ```
 
-<memo.txt와 memo-copy.txt가 함께 보이는 출력 결과>
+ls
+
+memo-copy.txt  memo.txt
 
 ```
 
@@ -497,7 +519,9 @@ ls
 
 ```
 
-<memo-renamed.txt가 보이는 출력 결과>
+ls
+
+memo-renamed.txt  memo.txt
 
 ```
 
@@ -523,7 +547,9 @@ ls
 
 ```
 
-<memo-renamed.txt가 삭제된 출력 결과>
+ls
+
+memo.txt
 
 ```
 
@@ -549,7 +575,11 @@ pwd
 
 ```
 
-<상위 디렉터리 경로 출력 결과>
+/home/psw/docker-web
+
+psw@5F-125:\~/docker-web$
+
+
 
 ```
 
@@ -651,7 +681,9 @@ ls -l permission-file.txt
 
 ```
 
-<변경 전 permission-file.txt 권한 출력>
+ls -l permission-file.txt
+
+\-rw-r--r-- 1 psw psw 0 Nov  2 13:12 permission-file.txt
 
 ```
 
@@ -677,7 +709,9 @@ ls -l permission-file.txt
 
 ```
 
-<변경 후 permission-file.txt 권한 출력>
+ls -l permission-file.txt
+
+\-rw-r--r-- 1 psw psw 0 Nov  2 13:12 permission-file.txt
 
 ```
 
@@ -707,7 +741,9 @@ ls -ld permission-dir
 
 ```
 
-<변경 전 permission-dir 권한 출력>
+ls -ld permission-dir
+
+drwxr-xr-x 2 psw psw 4096 Nov  2 13:14 permission-dir
 
 ```
 
@@ -733,7 +769,9 @@ ls -ld permission-dir
 
 ```
 
-<변경 후 permission-dir 권한 출력>
+drwxr-xr-x 2 psw psw 4096 Nov  2 13:14 permission-dir
+
+psw@5F-125:\~/docker-web$
 
 ```
 
@@ -765,7 +803,7 @@ docker --version
 
 ```
 
-<docker --version 출력 결과>
+Docker version 29.9.2, build a82e528
 
 ```
 
@@ -789,7 +827,23 @@ docker info
 
 ```
 
-<docker info 출력 결과 일부>
+Client:
+
+&#x20;Version:    29.9.2
+
+&#x20;Context:    default
+
+&#x20;Debug Mode: false
+
+&#x20;Plugins:
+
+&#x20; agent: Docker AI Agent Runner (Docker Inc.)
+
+&#x20;   Version:  v1.152.0
+
+&#x20;   Path:     /usr/local/lib/docker/cli-plugins/docker-agent
+
+&#x20; ai: Docker AI Agent - Ask Gordon (Docker Inc.)
 
 ```
 
@@ -825,7 +879,33 @@ docker pull nginx:alpine
 
 ```
 
-<docker pull nginx:alpine 출력 결과>
+alpine: Pulling from library/nginx
+
+b9b388a21ecf: Pull complete
+
+7cc330898115: Pull complete
+
+7b229517ed22: Pull complete
+
+12b85cff06fd: Pull complete
+
+657023555a2a: Pull complete
+
+2ec5fb117ffa: Pull complete
+
+26185d08a3ec: Pull complete
+
+9b0f7dfe35b2: Pull complete
+
+a4d5b1f57abc: Download complete
+
+acc2d54c3743: Download complete
+
+Digest: sha256:785835ea65db4bba6f021acc0f3be91b0fef76a53fe41f8588c6698d2aed0606
+
+Status: Downloaded newer image for nginx:alpine
+
+docker.io/library/nginx:alpine
 
 ```
 
@@ -849,7 +929,17 @@ docker images
 
 ```
 
-<docker images 출력 결과>
+docker-web:latest    e23e907a46ad        241MB         63.9MB    U
+
+hello-world:latest   c567b231f656       25.9kB         9.49kB    U
+
+my-web:latest        7e7d5e50e1e2        241MB         63.9MB
+
+nginx:alpine         785835ea65db       94.5MB         27.2MB
+
+nginx:latest         5ab5b0b01097        243MB         66.8MB
+
+ubuntu:latest        6a06111c3b0a        163MB         45.9MB    U
 
 ```
 
@@ -873,8 +963,7 @@ docker run -d --name nginx-basic nginx:alpine
 
 ```
 
-<컨테이너 ID 출력 결과>
-
+8eb037c579df5a66b5fcf151eee58b44f4fd31a4b049020070461a65ddd8a26d
 ```
 
 
@@ -897,8 +986,11 @@ docker ps
 
 ```
 
-<docker ps 출력 결과>
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS             PORTS                                     NAMES
 
+8eb037c579df   nginx:alpine   "/docker-entrypoint.…"   12 seconds ago      Up 12 seconds      80/tcp                                    nginx-basic
+
+0047949b4bf0   docker-web     "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
 ```
 
 
@@ -921,8 +1013,25 @@ docker ps -a
 
 ```
 
-<docker ps -a 출력 결과>
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS             PORTS                                     NAMES
 
+8eb037c579df   nginx:alpine   "/docker-entrypoint.…"   12 seconds ago      Up 12 seconds      80/tcp                                    nginx-basic
+
+0047949b4bf0   docker-web     "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
+
+psw@5F-125:\~/docker-web$ docker ps -a
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS                   PORTS                                     NAMES
+
+8eb037c579df   nginx:alpine   "/docker-entrypoint.…"   20 seconds ago      Up 20 seconds            80/tcp                                    nginx-basic
+
+b2732bac1d99   docker-web     "/docker-entrypoint.…"   57 minutes ago      Created                                                            keen\_torvalds
+
+0047949b4bf0   docker-web     "/docker-entrypoint.…"   About an hour ago   Up About an hour         0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
+
+9b2e8bc5846f   ubuntu         "bash"                   3 hours ago         Exited (0) 3 hours ago                                             heuristic\_leavitt
+
+b5a11697d9f3   hello-world    "/hello"                 3 hours ago         Exited (0) 3 hours ago                                             nifty\_solomon
 ```
 
 
@@ -945,7 +1054,51 @@ docker logs nginx-basic
 
 ```
 
-<docker logs 출력 결과>
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+
+/docker-entrypoint.sh: Configuration complete; ready for start up
+
+2026/11/02 04:15:20 \[notice] 1#1: using the "epoll" event method
+
+2026/11/02 04:15:20 \[notice] 1#1: nginx/1.31.8
+
+2026/11/02 04:15:20 \[notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0)
+
+2026/11/02 04:15:20 \[notice] 1#1: OS: Linux 6.18.54.1-microsoft-standard-WSL2
+
+2026/11/02 04:15:20 \[notice] 1#1: getrlimit(RLIMIT\_NOFILE): 1048576:1048576
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker processes
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 30
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 31
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 32
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 33
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 34
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 35
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 36
+
+2026/11/02 04:15:20 \[notice] 1#1: start worker process 37
 
 ```
 
@@ -969,7 +1122,11 @@ docker stats --no-stream
 
 ```
 
-<docker stats --no-stream 출력 결과>
+CONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT     MEM %     NET I/O        BLOCK I/O     PIDS
+
+8eb037c579df   nginx-basic            0.00%     7.781MiB / 7.605GiB   0.10%     872B / 126B    0B / 12.3kB   9
+
+0047949b4bf0   docker-web-container   0.00%     7.617MiB / 7.605GiB   0.10%     9.96kB / 6kB   0B / 12.3kB   9
 
 ```
 
@@ -995,7 +1152,13 @@ docker rm nginx-basic
 
 ```
 
-<컨테이너 중지 및 삭제 출력 결과>
+
+
+docker rm nginx-basic
+
+nginx-basic
+
+nginx-basic
 
 ```
 
@@ -1027,8 +1190,45 @@ docker run hello-world
 
 ```
 
-<hello-world 실행 성공 출력 결과>
+Hello from Docker!
 
+This message shows that your installation appears to be working correctly.
+
+
+
+To generate this message, Docker took the following steps:
+
+&#x20;1. The Docker client contacted the Docker daemon.
+
+&#x20;2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+
+&#x20;   (amd64)
+
+&#x20;3. The Docker daemon created a new container from that image which runs the
+
+&#x20;   executable that produces the output you are currently reading.
+
+&#x20;4. The Docker daemon streamed that output to the Docker client, which sent it
+
+&#x20;   to your terminal.
+
+
+
+To try something more ambitious, you can run an Ubuntu container with:
+
+&#x20;$ docker run -it ubuntu bash
+
+
+
+Share images, automate workflows, and more with a free Docker ID:
+
+&#x20;https://hub.docker.com/
+
+
+
+For more examples and ideas, visit:
+
+&#x20;https://docs.docker.com/get-started/
 ```
 
 
@@ -1123,7 +1323,13 @@ docker ps
 
 ```
 
-<ubuntu-keep 컨테이너가 실행 중인 출력 결과>
+CONTAINER ID   IMAGE        COMMAND                  CREATED             STATUS             PORTS                                     NAMES
+
+211e1ca6018d   ubuntu       "sleep infinity"         6 seconds ago       Up 6 seconds                                                 ubuntu-keep
+
+0047949b4bf0   docker-web   "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
+
+psw@5F-125:\~/docker-web$
 
 ```
 
@@ -1239,7 +1445,7 @@ LABEL description="Custom nginx web server for Docker workstation assignment"
 
 
 
-ENV APP\\\\\\\_ENV=practice
+ENV APP\\\\\\\\\\\\\\\_ENV=practice
 
 
 
@@ -1283,17 +1489,17 @@ COPY index.html /usr/share/nginx/html/index.html
 
 <head>
 
-\\\&#x20; <meta charset="UTF-8">
+\\\\\\\&#x20; <meta charset="UTF-8">
 
-\\\&#x20; <title>Docker Web Project</title>
+\\\\\\\&#x20; <title>Docker Web Project</title>
 
 </head>
 
 <body>
 
-\\\&#x20; <h1>Hello Docker Web Project</h1>
+\\\\\\\&#x20; <h1>Hello Docker Web Project</h1>
 
-\\\&#x20; <p>This page is served by nginx container.</p>
+\\\\\\\&#x20; <p>This page is served by nginx container.</p>
 
 </body>
 
@@ -1321,7 +1527,43 @@ docker build -t docker-web .
 
 ```
 
-<docker build 출력 결과>
+\[+] Building 0.3s (7/7) FINISHED                                   docker:default
+
+&#x20;=> \[internal] load build definition from Dockerfile                         0.0s
+
+&#x20;=> => transferring dockerfile: 105B                                         0.0s
+
+&#x20;=> \[internal] load metadata for docker.io/library/nginx:latest              0.0s
+
+&#x20;=> \[internal] load .dockerignore                                            0.0s
+
+&#x20;=> => transferring context: 2B                                              0.0s
+
+&#x20;=> \[internal] load build context                                            0.0s
+
+&#x20;=> => transferring context: 32B                                             0.0s
+
+&#x20;=> \[1/2] FROM docker.io/library/nginx:latest@sha256:5ab5b0b01097420873a3f3  0.0s
+
+&#x20;=> => resolve docker.io/library/nginx:latest@sha256:5ab5b0b01097420873a3f3  0.0s
+
+&#x20;=> CACHED \[2/2] COPY index.html /usr/share/nginx/html/index.html            0.0s
+
+&#x20;=> exporting to image                                                       0.1s
+
+&#x20;=> => exporting layers                                                      0.0s
+
+&#x20;=> => exporting manifest sha256:9d154951c3cea202079c598ec6a8798cbd699dd4d8  0.0s
+
+&#x20;=> => exporting config sha256:5c234f45e87eb940ab403a246dd9a3003679fd1b2464  0.0s
+
+&#x20;=> => exporting attestation manifest sha256:8d6f1e261aee00fb4d9bc316dea3cd  0.0s
+
+&#x20;=> => exporting manifest list sha256:33152ebf8012864b81cba8d221a6767b58207  0.0s
+
+&#x20;=> => naming to docker.io/library/docker-web:latest                         0.0s
+
+&#x20;=> => unpacking to docker.io/library/docker-web:latest                      0.0s
 
 ```
 
@@ -1345,8 +1587,11 @@ docker images docker-web
 
 ```
 
-<docker images docker-web 출력 결과>
+                                                              i Info →   U  In Use
 
+IMAGE               ID             DISK USAGE   CONTENT SIZE   EXTRA
+
+docker-web:latest   33152ebf8012        241MB         63.9MB    U
 ```
 
 
@@ -1363,13 +1608,13 @@ docker run -d -p 8080:80 --name docker-web-container docker-web
 
 
 
-출력 결과:
+출력 결과: 
 
 
 
 ```
 
-<컨테이너 ID 출력 결과>
+69e89ec20fac027807a108e17f9b09ccb18e9c248ddb27323b44f8c0d09d44f8
 
 ```
 
@@ -1393,7 +1638,11 @@ docker ps
 
 ```
 
-<docker-web-container와 0.0.0.0:8080->80/tcp가 보이는 출력 결과>
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+
+b0bbb0479e3b   docker-web   "/docker-entrypoint.…"   20 seconds ago   Up 20 seconds   0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
+
+211e1ca6018d   ubuntu       "sleep infinity"         2 minutes ago    Up 2 minutes                                              ubuntu-keep
 
 ```
 
@@ -1425,7 +1674,7 @@ docker run -d -p 8080:80 --name docker-web-container docker-web
 
 ```
 
-\\\\-p <host\\\\\\\_port>:<container\\\\\\\_port>
+\\\\\\\\-p <host\\\\\\\\\\\\\\\_port>:<container\\\\\\\\\\\\\\\_port>
 
 ```
 
@@ -1437,7 +1686,7 @@ docker run -d -p 8080:80 --name docker-web-container docker-web
 
 ```
 
-\\\\-p 8080:80
+\\\\\\\\-p 8080:80
 
 ```
 
@@ -1473,7 +1722,25 @@ curl http://localhost:8080
 
 ```
 
-<index.html 응답 결과 붙여넣기>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+&#x20; <meta charset="UTF-8">
+
+&#x20; <title>Docker Web</title>
+
+</head>
+
+<body>
+
+&#x20; <h1>Hello Docker Web!</h1>
+
+&#x20; <p>이 페이지는 docker-web 이미지에서 실행 중입니다.</p>
+
+</body>
 
 ```
 
@@ -1525,14 +1792,7 @@ http://localhost:8080
 
 ```
 
-docker run -d -p 8082:80 \\\\\\\\
-
-\\\&#x20; -v $(pwd)/index.html:/usr/share/nginx/html/index.html \\\\\\\\
-
-\\\&#x20; --name docker-web-bind \\\\\\\\
-
-\\\&#x20; docker-web
-
+docker run -d -p 8082:80 -v $(pwd)/index.html:/usr/share/nginx/html/index.html --name docker-web-bind docker-web
 ```
 
 
@@ -1543,7 +1803,7 @@ docker run -d -p 8082:80 \\\\\\\\
 
 ```
 
-<컨테이너 ID 출력 결과>
+9b12b30dc81e1de6651aae763354bf3c9f73438f390eb68084659634040c402b
 
 ```
 
@@ -1567,7 +1827,13 @@ docker ps
 
 ```
 
-<docker-web-bind와 0.0.0.0:8082->80/tcp가 보이는 출력 결과>
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+
+9b12b30dc81e   docker-web   "/docker-entrypoint.…"   32 seconds ago   Up 31 seconds   0.0.0.0:8082->80/tcp, \[::]:8082->80/tcp   docker-web-bind
+
+69e89ec20fac   docker-web   "/docker-entrypoint.…"   3 minutes ago    Up 3 minutes    0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
+
+211e1ca6018d   ubuntu       "sleep infinity"         7 minutes ago    Up 7 minutes                                              ubuntu-keep
 
 ```
 
@@ -1591,7 +1857,27 @@ curl http://localhost:8082
 
 ```
 
-<변경 전 index.html 응답 결과>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+&#x20; <meta charset="UTF-8">
+
+&#x20; <title>Docker Web</title>
+
+</head>
+
+<body>
+
+&#x20; <h1>Hello Docker Web!</h1>
+
+&#x20; <p>이 페이지는 docker-web 이미지에서 실행 중입니다.</p>
+
+</body>
+
+</html>
 
 ```
 
@@ -1675,7 +1961,7 @@ docker rm -f docker-web-bind
 
 ```
 
-<docker-web-bind 삭제 출력 결과>
+docker-web-bind
 
 ```
 
@@ -1739,7 +2025,11 @@ docker volume ls
 
 ```
 
-<mydata 볼륨이 보이는 출력 결과>
+DRIVER    VOLUME NAME
+
+local     my-volume
+
+local     mydata
 
 ```
 
@@ -1763,8 +2053,7 @@ docker run -d --name vol-test -v mydata:/data ubuntu sleep infinity
 
 ```
 
-<컨테이너 ID 출력 결과>
-
+4894a592ef6905bdc215839a685cefec3db0fa158522e8cc22d7be35e1dc6982
 ```
 
 
@@ -1787,7 +2076,13 @@ docker ps
 
 ```
 
-<vol-test 컨테이너가 실행 중인 출력 결과>
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+
+4894a592ef69   ubuntu       "sleep infinity"         13 seconds ago   Up 13 seconds                                             vol-test
+
+69e89ec20fac   docker-web   "/docker-entrypoint.…"   4 minutes ago    Up 4 minutes    0.0.0.0:8080->80/tcp, \[::]:8080->80/tcp   docker-web-container
+
+211e1ca6018d   ubuntu       "sleep infinity"         8 minutes ago    Up 8 minutes                                              ubuntu-keep
 
 ```
 
@@ -1799,7 +2094,7 @@ docker ps
 
 ```
 
-docker exec vol-test bash -lc "echo hi > /data/hello.txt \\\\\\\&\\\\\\\& cat /data/hello.txt"
+docker exec vol-test bash -lc "echo hi > /data/hello.txt \\\\\\\\\\\\\\\&\\\\\\\\\\\\\\\& cat /data/hello.txt"
 
 ```
 
@@ -1883,7 +2178,7 @@ docker run -d --name vol-test2 -v mydata:/data ubuntu sleep infinity
 
 ```
 
-<컨테이너 ID 출력 결과>
+147eb62767e015012c69baf3bb04108901e0b8e38c8a018c625c2b88248a9046
 
 ```
 
@@ -1985,7 +2280,7 @@ git config --global user.email "<이메일은 공개 README에 필요하면 마�
 
 ```
 
-psw\\\\\\\*\\\\\\\*\\\\\\\*\\\\\\\*@example.com
+psw\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*@example.com
 
 ```
 
@@ -2305,11 +2600,11 @@ Docker CLI는 설치되어 있으나 Docker daemon이 동작하지 않는 상태
 
 ```
 
-1\\\\. Windows에서 Docker Desktop을 실행했습니다.
+1\\\\\\\\. Windows에서 Docker Desktop을 실행했습니다.
 
-2\\\\. Docker Desktop Settings에서 WSL Integration을 활성화했습니다.
+2\\\\\\\\. Docker Desktop Settings에서 WSL Integration을 활성화했습니다.
 
-3\\\\. WSL Ubuntu 터미널을 다시 열고 docker info를 실행했습니다.
+3\\\\\\\\. WSL Ubuntu 터미널을 다시 열고 docker info를 실행했습니다.
 
 ```
 
@@ -2471,11 +2766,11 @@ git status
 
 ```
 
-1\\\\. GitHub에서 Personal Access Token을 발급했습니다.
+1\\\\\\\\. GitHub에서 Personal Access Token을 발급했습니다.
 
-2\\\\. push 인증 시 비밀번호 대신 토큰을 사용했습니다.
+2\\\\\\\\. push 인증 시 비밀번호 대신 토큰을 사용했습니다.
 
-3\\\\. 토큰은 README와 스크린샷에 남기지 않았습니다.
+3\\\\\\\\. 토큰은 README와 스크린샷에 남기지 않았습니다.
 
 ```
 
@@ -2675,7 +2970,7 @@ nginx:alpine
 
 ```
 
-\\\\-p 8080:80
+\\\\\\\\-p 8080:80
 
 ```
 
@@ -2757,15 +3052,15 @@ GitHub: 원격 저장소 및 협업 플랫폼
 
 ```
 
-1\\\\. GitHub 토큰을 README에 기록하지 않았습니다.
+1\\\\\\\\. GitHub 토큰을 README에 기록하지 않았습니다.
 
-2\\\\. 비밀번호, 인증 코드, 개인키를 캡처하지 않았습니다.
+2\\\\\\\\. 비밀번호, 인증 코드, 개인키를 캡처하지 않았습니다.
 
-3\\\\. git config 출력에서 이메일은 필요한 경우 마스킹했습니다.
+3\\\\\\\\. git config 출력에서 이메일은 필요한 경우 마스킹했습니다.
 
-4\\\\. 스크린샷에 민감정보가 포함되지 않도록 확인했습니다.
+4\\\\\\\\. 스크린샷에 민감정보가 포함되지 않도록 확인했습니다.
 
-5\\\\. 민감정보가 노출된 경우 즉시 문서와 Git 히스토리에서 제거하고 토큰을 재발급해야 합니다.
+5\\\\\\\\. 민감정보가 노출된 경우 즉시 문서와 Git 히스토리에서 제거하고 토큰을 재발급해야 합니다.
 
 ```
 
