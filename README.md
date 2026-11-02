@@ -102,7 +102,7 @@ docker --version
 
 ```
 
-<여기에 실제 docker --version 출력 결과 붙여넣기>
+Docker version 29.9.2, build a82e528
 
 ```
 
@@ -126,7 +126,23 @@ docker info
 
 ```
 
-<여기에 docker info 출력 결과 일부 붙여넣기>
+Client:
+
+&#x20;Version:    29.9.2
+
+&#x20;Context:    default
+
+&#x20;Debug Mode: false
+
+&#x20;Plugins:
+
+&#x20; agent: Docker AI Agent Runner (Docker Inc.)
+
+&#x20;   Version:  v1.152.0
+
+&#x20;   Path:     /usr/local/lib/docker/cli-plugins/docker-agent
+
+...
 
 ```
 
@@ -150,7 +166,10 @@ git --version
 
 ```
 
-<여기에 실제 git --version 출력 결과 붙여넣기>
+git version 2.53.0
+
+
+
 
 ```
 
@@ -176,17 +195,17 @@ docker-web/
 
 └── docs/
 
-&#x20;   └── images/
+\\\&#x20;   └── images/
 
-&#x20;       ├── port-8080.png
+\\\&#x20;       ├── port-8080.png
 
-&#x20;       ├── bind-before.png
+\\\&#x20;       ├── bind-before.png
 
-&#x20;       ├── bind-after.png
+\\\&#x20;       ├── bind-after.png
 
-&#x20;       ├── vscode-github.png
+\\\&#x20;       ├── vscode-github.png
 
-&#x20;       └── github-repository.png
+\\\&#x20;       └── github-repository.png
 
 ```
 
@@ -1220,7 +1239,7 @@ LABEL description="Custom nginx web server for Docker workstation assignment"
 
 
 
-ENV APP\_ENV=practice
+ENV APP\\\\\\\_ENV=practice
 
 
 
@@ -1264,17 +1283,17 @@ COPY index.html /usr/share/nginx/html/index.html
 
 <head>
 
-&#x20; <meta charset="UTF-8">
+\\\&#x20; <meta charset="UTF-8">
 
-&#x20; <title>Docker Web Project</title>
+\\\&#x20; <title>Docker Web Project</title>
 
 </head>
 
 <body>
 
-&#x20; <h1>Hello Docker Web Project</h1>
+\\\&#x20; <h1>Hello Docker Web Project</h1>
 
-&#x20; <p>This page is served by nginx container.</p>
+\\\&#x20; <p>This page is served by nginx container.</p>
 
 </body>
 
@@ -1406,7 +1425,7 @@ docker run -d -p 8080:80 --name docker-web-container docker-web
 
 ```
 
-\-p <host\_port>:<container\_port>
+\\\\-p <host\\\\\\\_port>:<container\\\\\\\_port>
 
 ```
 
@@ -1418,7 +1437,7 @@ docker run -d -p 8080:80 --name docker-web-container docker-web
 
 ```
 
-\-p 8080:80
+\\\\-p 8080:80
 
 ```
 
@@ -1506,13 +1525,13 @@ http://localhost:8080
 
 ```
 
-docker run -d -p 8082:80 \\
+docker run -d -p 8082:80 \\\\\\\\
 
-&#x20; -v $(pwd)/index.html:/usr/share/nginx/html/index.html \\
+\\\&#x20; -v $(pwd)/index.html:/usr/share/nginx/html/index.html \\\\\\\\
 
-&#x20; --name docker-web-bind \\
+\\\&#x20; --name docker-web-bind \\\\\\\\
 
-&#x20; docker-web
+\\\&#x20; docker-web
 
 ```
 
@@ -1780,7 +1799,7 @@ docker ps
 
 ```
 
-docker exec vol-test bash -lc "echo hi > /data/hello.txt \&\& cat /data/hello.txt"
+docker exec vol-test bash -lc "echo hi > /data/hello.txt \\\\\\\&\\\\\\\& cat /data/hello.txt"
 
 ```
 
@@ -1966,7 +1985,7 @@ git config --global user.email "<이메일은 공개 README에 필요하면 마�
 
 ```
 
-psw\*\*\*\*@example.com
+psw\\\\\\\*\\\\\\\*\\\\\\\*\\\\\\\*@example.com
 
 ```
 
@@ -2286,11 +2305,11 @@ Docker CLI는 설치되어 있으나 Docker daemon이 동작하지 않는 상태
 
 ```
 
-1\. Windows에서 Docker Desktop을 실행했습니다.
+1\\\\. Windows에서 Docker Desktop을 실행했습니다.
 
-2\. Docker Desktop Settings에서 WSL Integration을 활성화했습니다.
+2\\\\. Docker Desktop Settings에서 WSL Integration을 활성화했습니다.
 
-3\. WSL Ubuntu 터미널을 다시 열고 docker info를 실행했습니다.
+3\\\\. WSL Ubuntu 터미널을 다시 열고 docker info를 실행했습니다.
 
 ```
 
@@ -2452,11 +2471,11 @@ git status
 
 ```
 
-1\. GitHub에서 Personal Access Token을 발급했습니다.
+1\\\\. GitHub에서 Personal Access Token을 발급했습니다.
 
-2\. push 인증 시 비밀번호 대신 토큰을 사용했습니다.
+2\\\\. push 인증 시 비밀번호 대신 토큰을 사용했습니다.
 
-3\. 토큰은 README와 스크린샷에 남기지 않았습니다.
+3\\\\. 토큰은 README와 스크린샷에 남기지 않았습니다.
 
 ```
 
@@ -2656,7 +2675,7 @@ nginx:alpine
 
 ```
 
-\-p 8080:80
+\\\\-p 8080:80
 
 ```
 
@@ -2738,15 +2757,15 @@ GitHub: 원격 저장소 및 협업 플랫폼
 
 ```
 
-1\. GitHub 토큰을 README에 기록하지 않았습니다.
+1\\\\. GitHub 토큰을 README에 기록하지 않았습니다.
 
-2\. 비밀번호, 인증 코드, 개인키를 캡처하지 않았습니다.
+2\\\\. 비밀번호, 인증 코드, 개인키를 캡처하지 않았습니다.
 
-3\. git config 출력에서 이메일은 필요한 경우 마스킹했습니다.
+3\\\\. git config 출력에서 이메일은 필요한 경우 마스킹했습니다.
 
-4\. 스크린샷에 민감정보가 포함되지 않도록 확인했습니다.
+4\\\\. 스크린샷에 민감정보가 포함되지 않도록 확인했습니다.
 
-5\. 민감정보가 노출된 경우 즉시 문서와 Git 히스토리에서 제거하고 토큰을 재발급해야 합니다.
+5\\\\. 민감정보가 노출된 경우 즉시 문서와 Git 히스토리에서 제거하고 토큰을 재발급해야 합니다.
 
 ```
 
@@ -2935,8 +2954,4 @@ Dockerfile을 직접 작성하여 nginx 기반 커스텀 이미지를 만들었�
 
 
 마지막으로 Git 설정, GitHub 원격 저장소 연결, VSCode GitHub 연동을 완료하여 전체 수행 결과를 GitHub Repository에서 확인할 수 있도록 정리했습니다.
-
-
-
-
 
